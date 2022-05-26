@@ -19,7 +19,7 @@ include('header1.php');
                 <div class="col-lg-9 col-md-8 pr-lg-5">
                     <?php foreach (Blog::find_by_undeleted() as $key => $value) { ?>
                         <div class="card mb-5 shadow border-0">
-                            <img src="img\blog\<?php echo $value->image ?>" class="card-img-top" alt="blog image">
+                            <img src="inc\uploads\blog\<?php echo $value->image ?>" class="card-img-top" alt="blog image">
                             <div class="card-body">
                                 <h5 class="card-title text-primary"> <?php echo $value->title ?></h5>
                                 <p class="card-text"> <?php echo $value->summary ?> </p>

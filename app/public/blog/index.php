@@ -83,8 +83,8 @@ include(SHARED_PATH . '/admin_header.php');
 
                <div class="mb-3 col-lg-6 col-md-6">
                   <label for="image" class="form-label">Blog Image</label>
-                  <input class="form-control" type="file" name="image" accept="image/*" required="" id="image" placeholder="Enter your blog image">
-                  <div class="image"></div>
+                  <input class="form-control" type="file" name="imageupload" accept="image/*" required="" id="image">
+                  <div class="image mt-2 position-relative"></div>
                </div>
 
                <div class="mb-3 col-lg-6 col-md-6">
@@ -141,22 +141,30 @@ include(SHARED_PATH . '/admin_header.php');
 <script src="<?php echo url_for('assets/js/pages/demo.datatable-init.js') ?>"></script>
 
 <script type="text/javascript">
-   // $('input[type="file"]').change(function(e) {
-   //    var fileName = e.target.files[0].name;
-   //    $('.image').html(`<input name="image" type="hidden" id="image" value="${fileName}">`)
-   // });
+   $('input[type="file"]').change(function(e) {
+      var fileName = e.target.files[0].name;
+      var image = document.getElementById('output');
+      var source = URL.createObjectURL(e.target.files[0]);
+      $('.image').html(`<span class="text-white delete py-0 px-1 btn btn-danger position-absolute" style="top:0px; right:0px">X</span><img id="output" src="${source}" width="100%" height="auto" />`)
+   });
+
+   $(document).on("click", ".delete", function(e) {
+      var image_input = document.getElementById('image');
+      $(".image").empty();
+      image_input.value = null;
+   })
 
    $(document).on("submit", "#form", function(e) {
       e.preventDefault();
       $.ajax({
          url: 'components/createBlog.php',
          method: "POST",
+         // data: $(this).serialize(),
+         dataType: "json",
          data: new FormData(this),
          contentType: false,
          cache: false,
          processData: false,
-         // data: $(this).serialize(),
-         // dataType: "json",
          success: function(data) {
             console.log(data)
             if (data.success == true) {
@@ -183,8 +191,20 @@ include(SHARED_PATH . '/admin_header.php');
             id: blog_id,
          },
          success: function(data) {
-            console.log(data);
             $("#showData").html(data)
+
+            $('input[type="file"]').change(function(e) {
+               var fileName = e.target.files[0].name;
+               var image = document.getElementById('output');
+               var source = URL.createObjectURL(e.target.files[0]);
+               $('.image').html(`<span class="text-white delete py-0 px-1 btn btn-danger position-absolute" style="top:0px; right:0px">X</span><img id="output" src="${source}" width="100%" height="auto" />`)
+            });
+
+            $(document).on("click", ".delete", function(e) {
+               var img_input = document.getElementById('img_input');
+               $(".image").empty();
+               img_input.value = null;
+            })
          }
       })
    })
@@ -194,8 +214,12 @@ include(SHARED_PATH . '/admin_header.php');
       $.ajax({
          url: 'components/process_update.php',
          method: "POST",
-         data: $(this).serialize(),
+         // data: $(this).serialize(),
          dataType: 'json',
+         data: new FormData(this),
+         contentType: false,
+         cache: false,
+         processData: false,
          success: function(data) {
             if (data.success == true) {
                successAlert(data.msg);

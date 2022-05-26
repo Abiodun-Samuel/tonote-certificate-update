@@ -8,8 +8,7 @@ $blog = Blog::find_by_id($id);
 
    <div class="error d-none"></div>
 
-   <form class="ps-3 pe-3 row" id="form">
-
+   <form class="ps-3 pe-3 row" id="form" enctype="multipart/form-data">
       <div class="mb-3 col-12">
          <label for="title" class="form-label">Blog Title</label>
          <input class="form-control" name="title" type="text" id="title" required="" value="<?php echo $blog->title ?>" placeholder="Blog Title">
@@ -22,7 +21,8 @@ $blog = Blog::find_by_id($id);
 
       <div class="mb-3 col-lg-6 col-md-6">
          <label for="image" class="form-label">Blog Image</label>
-         <input class="form-control" name="image" type="file" required="" id="image" placeholder="Enter your blog image">
+         <input class="form-control" type="file" name="imageupload" accept="image/*" required="" id="img_input">
+         <div class="image mt-2 position-relative"></div>
       </div>
 
       <div class="mb-3 col-lg-6 col-md-6">
@@ -34,10 +34,6 @@ $blog = Blog::find_by_id($id);
          <label for="summary" class="form-label">Blog Summary</label>
          <textarea name="summary" id="" cols="30" rows="5" class="form-control" require=""><?php echo $blog->summary ?></textarea>
       </div>
-
-      <!-- <div class="mb-3 text-center">
-         <button class="btn btn-primary" type="submit">Update Blog</button>
-      </div> -->
    </form>
 </div>
 

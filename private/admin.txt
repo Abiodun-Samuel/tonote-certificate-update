@@ -15,3 +15,4 @@
 2022-05-26 08:35:10 | Delete blog: id: 18, Deleted by Admin One
 2022-05-26 08:35:14 | Delete blog: id: 17, Deleted by Admin One
 2022-05-26 08:35:19 | Delete blog: id: 16, Deleted by Admin One
+2022-05-26 12:28:11 | Delete blog: id: 27, Deleted by Admin One
