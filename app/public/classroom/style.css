@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+    --blue-500: #013CB3;
+    --blue-400: #2b5fc6;
+    --blue-300: #6491ed;
+    --blue-200: #a5c1f8;
+    --blue-100: #cadbff;
+    --blue-50: #dfeafe;
+    --blue-0: #f3f7ff;
+}
+body {
+  padding: 10px;
+  background: white;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  src: url('https://fonts.gstatic.com/s/opensans/v29/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4gaVc.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/pinyonscript/v16/6xKpdSJbL9-e9LuoeQiDRQR8WOXaPw.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Rochester';
+  font-style: normal;
+  src: url('https://fonts.gstatic.com/s/rochester/v18/6ae-4KCqVa4Zy6Fif-UC2FHS.ttf') format('truetype');
+}
+.cursive {
+  font-family: 'Pinyon Script', cursive;
+}
+.sans {
+  font-family: 'Open Sans', sans-serif;
+}
+.text-blue-500{
+    color: var(--blue-500);
+}
+
+.certificate__container {
+    background-image:url('bg.svg'), radial-gradient(var(--blue-0) 25%, #fff );
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding: 30px;
+    border: 30px solid var(--blue-500);
+    border-radius: 5px;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 18%);
+    max-width: calc(100vw - 20px);
+    min-height: calc(100vh - 20px);
+}
+.certificate__img{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.certificate__img img{
+    max-height: 100px;
+    max-width: 100px;
+}
+.qrcode{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* certificate header section  */
+.certificate__header{
+    text-align: center;
+    font-size: 1rem; 
+    margin: 2rem 0;
+    color: var(--blue-500);
+}
+.certificate__header span{
+    font-family: 'Pinyon Script';
+    text-transform: lowercase;
+
+}
+.certificate__header h1{
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* certificate body section  */
+.certificate__body{
+    padding: 1rem 3rem;
+    text-align: center;
+}
+
+.certificate__body p{
+    margin: 1.5rem 0;
+    font-family: 'Open sans';
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.certificate__owner{
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    display: inline-block;
+    padding: 5px 0;
+    width: 35%;
+    text-transform: uppercase;
+    border-bottom: 2px dotted #242424;
+}
+
+/* certificate footer section  */
+.certificate__footer{
+    text-align: center;
+    margin: 3rem 0 1.5rem 0;
+}
+.certificate__footer .certificate__trainer{
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: 'Rochester';
+    padding: 5px 0;
+    width: 35%;
+    border-bottom: 2px dotted #242424;
+}
+.certificate__footer .certificate__specialist{
+  padding-top: 10px;
+  font-size: 1rem;
+}

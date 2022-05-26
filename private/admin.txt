@@ -1,0 +1,17 @@
+2022-05-24 16:48:23 | Delete blog: id: 6, Deleted by Admin One
+2022-05-24 16:48:49 | Delete blog: id: 5, Deleted by Admin One
+2022-05-24 16:49:17 | Delete blog: id: 4, Deleted by Admin One
+2022-05-24 16:49:35 | Delete blog: id: 3, Deleted by Admin One
+2022-05-25 10:45:55 | Delete blog: id: 7, Deleted by Admin One
+2022-05-25 12:33:25 | Delete blog: id: 11, Deleted by Admin One
+2022-05-25 12:33:30 | Delete blog: id: 10, Deleted by Admin One
+2022-05-25 12:33:35 | Delete blog: id: 9, Deleted by Admin One
+2022-05-25 12:33:39 | Delete blog: id: 8, Deleted by Admin One
+2022-05-25 12:33:45 | Delete blog: id: 2, Deleted by Admin One
+2022-05-25 14:51:40 | Delete blog: id: 15, Deleted by Admin One
+2022-05-25 14:51:45 | Delete blog: id: 14, Deleted by Admin One
+2022-05-25 14:51:50 | Delete blog: id: 13, Deleted by Admin One
+2022-05-26 08:35:06 | Delete blog: id: 19, Deleted by Admin One
+2022-05-26 08:35:10 | Delete blog: id: 18, Deleted by Admin One
+2022-05-26 08:35:14 | Delete blog: id: 17, Deleted by Admin One
+2022-05-26 08:35:19 | Delete blog: id: 16, Deleted by Admin One

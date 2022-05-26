@@ -1,0 +1,75 @@
+.form-section {
+      position: absolute;
+      padding-left: 15px;
+      /*border-left: 2px solid #26489f;*/
+      visibility:hidden;
+      opacity:0;
+      transition: opacity 1.75s ;
+       -moz-transition: opacity 1.75s ;
+       -webkit-transition: opacity 1.75s ;
+    }
+    .form-section.current {
+     position: relative;
+      visibility:visible;
+      opacity:1;
+      transition: opacity 1.75s ease-in-out;
+       -moz-transition: opacity 1.75s ease-in-out;
+       -webkit-transition: opacity 1.75s ease-in-out;
+    }
+    .btn {
+      margin-top: 10px;
+    }
+    
+    .form-navigation{
+     transition: all 1.75s ease-in-out;
+       -moz-transition: all 1.75s ease-in-out;
+       -webkit-transition: all 1.75s ease-in-out; 
+    }
+    .parsley-required, .parsley-type{
+        color: red;
+    }
+    /* Make circles that indicate the steps of the form: */
+
+
+    .steps{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      text-align: center;
+    }
+
+
+    .steps li{
+      display: inline-block;
+      margin: 10px;
+      color: #ccc;
+      padding-bottom: 5px;
+    }
+
+    .step.active{
+      border-bottom: 1px solid darkblue;
+      color: darkblue;
+    }
+    .circle{
+        display: inline-block;
+        height: 30px; width: 30px;
+        border: 2px solid #ccc;
+        border-radius:100% ;
+    }
+    .lg-step{
+        display: block;
+        content: "Step";
+    }
+    .sm-step{
+        display: none;
+    }
+    @media(max-width: 640px){
+        .lg-step{
+            display: none;
+            content: "Step";
+        }
+        .sm-step{
+            display: block;
+        }
+    }
